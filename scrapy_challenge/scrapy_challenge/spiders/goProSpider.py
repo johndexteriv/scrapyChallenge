@@ -24,3 +24,6 @@ class goProSpider(scrapy.Spider):
         review_rating = response.xpath(
             '//i[contains(@data-hook, "review-star-rating")]/span/text()'
         ).extract()
+        review_text = response.xpath(
+            '//span[contains(@data-hook, "review-body")]/span/text()'
+        ).extract()
