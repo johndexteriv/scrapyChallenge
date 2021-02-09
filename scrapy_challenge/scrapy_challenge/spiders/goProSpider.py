@@ -12,21 +12,26 @@ class goProSpider(scrapy.Spider):
 
     def parse(self, response):
         items = ScrapyChallengeItem()
-        review_id = response.xpath(
-            '//div[contains(@data-hook, "review")]/@id'
-        ).extract()
-        review_title = response.xpath(
-            '//a[contains(@data-hook, "review-title")]/span/text()'
-        ).extract()
-        review_date = response.xpath(
-            '//span[contains(@data-hook, "review-date")]/text()'
-        ).extract()
-        review_rating = response.xpath(
-            '//i[contains(@data-hook, "review-star-rating")]/span/text()'
-        ).extract()
-        review_text = response.xpath(
-            '//span[contains(@data-hook, "review-body")]/span/text()'
-        ).extract()
+        all_review_divs = response.xpath('//div[contains(@data-hook, "review"]')
+
+        for reviews in all_review_divs
+
+            review_id = all_review_divs.xpath(
+                '//div[contains(@data-hook, "review")]/@id'
+            ).extract()
+            review_title = all_review_divs.xpath(
+                '//a[contains(@data-hook, "review-title")]/span/text()'
+            ).extract()
+            review_date = all_review_divs.xpath(
+                '//span[contains(@data-hook, "review-date")]/text()'
+            ).extract()
+            review_rating = all_review_divs.xpath(
+                '//i[contains(@data-hook, "review-star-rating")]/span/text()'
+            ).extract()
+            review_text = all_review_divs.xpath(
+                '//span[contains(@data-hook, "review-body")]/span/text()'
+            ).extract()
+
         items["review_id"] = "".join(review_id).strip()
         items["review_title"] = "".join(review_title).strip()
         items["review_date"] = "".join(review_date).strip()
