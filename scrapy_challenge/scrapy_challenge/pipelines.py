@@ -16,4 +16,5 @@ class ScrapyChallengePipeline:
         self.collection = db["reviews"]
 
     def process_item(self, item, spider):
+        self.collection.insert(dict(item))
         return item
