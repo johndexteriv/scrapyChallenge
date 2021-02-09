@@ -2,8 +2,8 @@ import scrapy
 from scrapy_challenge.items import ScrapyChallengeItem
 
 
-class goProSpider(scrapy.Spider):
-    name = "GoProReviews"
+class reviewSpider(scrapy.Spider):
+    name = "reviews"
     allowed_domains = ["amazon.com"]
 
     start_urls = [
