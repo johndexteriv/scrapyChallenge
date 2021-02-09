@@ -14,13 +14,38 @@ class productInfoSpider(scrapy.Spider):
         items = ProductInfoItem
         all_info_div = response.xpath('//div[contains(@id, "ppd")]')
 
-        for info in all_info_div
+        for info in all_info_div:
 
-            product_name = info.xpath('//span[@contains(@id, "productTitle")]/text()').extract()
-            product_brand = info.xpath('//span[@class="selectorgadget_selected"]/text()').extract
-            product_source = ('Amazon')
-            product_list_price = info.xpath('//span[@class="priceBlockStrikePriceString]/text()').extract()
-            product_sale_price = info.xpath('//span[@id="priceblock_pospromoprice"]/text()').extract()
-            product_description = info.xpath('//*[(@id = "feature-bullets")]//*[contains(concat( " ", @class, " " ), concat( " ", "a-list-item", " " ))]/li/text()').extract()
-            product_rating = info.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "a-star-4", " " ))]/span/text()').extract()
-            product_review_count = info.xpath('//span[@id="acrCustomerReviewText"]/text()').extract()
+            product_name = info.xpath(
+                '//span[contains(@id, "productTitle")]/text()'
+            ).extract()
+            product_brand = info.xpath(
+                '//span[@class="selectorgadget_selected"]/text()'
+            ).extract
+            product_source = "Amazon"
+            product_list_price = info.xpath(
+                '//span[@class="priceBlockStrikePriceString"]/text()'
+            ).extract()
+            product_sale_price = info.xpath(
+                '//span[@id="priceblock_pospromoprice"]/text()'
+            ).extract()
+            product_description = info.xpath(
+                '//*[(@id = "feature-bullets")]//*[contains(concat( " ", @class, " " ), concat( " ", "a-list-item", " " ))]/li/text()'
+            ).extract()
+            product_rating = info.xpath(
+                '//*[contains(concat( " ", @class, " " ), concat( " ", "a-star-4", " " ))]/span/text()'
+            ).extract()
+            product_review_count = info.xpath(
+                '//span[@id="acrCustomerReviewText"]/text()'
+            ).extract()
+
+            items["product_name"] = product_name
+            items["product_brand"] = product_brand
+            items["product_source"] = product_source
+            items["product_list_price"] = product_list_price
+            items["product_sale_price"] = product_sale_price
+            items["product_description"] = product_description
+            items["product_rating"] = product_rating
+            items["product_review_count"] = product_review_count
+
+            print(items)
