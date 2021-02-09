@@ -11,4 +11,4 @@ class goProSpider(scrapy.Spider):
     ]
 
     def parse(self, response):
-        
+        items = ScrapyChallengeItem()
