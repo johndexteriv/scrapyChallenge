@@ -9,4 +9,9 @@ import scrapy
 class ScrapyChallengeItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    review_id = scrapy.Field()
+    review_id = scrapy.Field()
+    review_title = scrapy.Field()
+    review_date = scrapy.Field()
+    review_rating = scrapy.Field()
+    review_text = scrapy.Field()
