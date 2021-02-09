@@ -42,3 +42,15 @@
 3. Create connection variable with pymongo and mongoclient
 4. Define database name and collection
 5. Create collection insertion statement
+
+## Successes
+
+- Configuring and initializing Python, Conda and Virtual Env.
+- Successfully configuring Scrapy spider to pull large data
+- Development of python syntax for loop using xpath component structure
+- Configuring local MongoDB instance
+- Configuring User Agents to overcome blacklisting
+
+## Areas for improvement
+
+- Further research and understanding of complex css and xpath component selectors to clean iterate and extra component information with for loops
