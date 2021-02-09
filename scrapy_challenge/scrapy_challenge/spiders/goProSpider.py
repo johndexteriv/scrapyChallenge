@@ -18,3 +18,6 @@ class goProSpider(scrapy.Spider):
         review_title = response.xpath(
             '//a[contains(@data-hook, "review-title")]/span/text()'
         ).extract()
+        review_date = response.xpath(
+            '//span[contains(@data-hook, "review-date")]/text()'
+        ).extract()
