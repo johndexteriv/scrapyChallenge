@@ -38,3 +38,7 @@ class reviewSpider(scrapy.Spider):
         items["review_rating"] = review_rating
         items["review_text"] = review_text
         yield items
+
+    next_page = response.css('li.a-last a::attr(href)').get()
+    if next_page is not None:
+        yield response.follow(next_page, callback=self.parse)
