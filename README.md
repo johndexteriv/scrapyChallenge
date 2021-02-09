@@ -54,3 +54,5 @@
 ## Areas for improvement
 
 - Further research and understanding of complex css and xpath component selectors to clean iterate and extra component information with for loops
+
+![ReviewData](/scrapy_challenge/assets/images/reviewdata.png)
