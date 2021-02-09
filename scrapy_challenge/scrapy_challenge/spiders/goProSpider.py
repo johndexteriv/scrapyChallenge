@@ -12,3 +12,6 @@ class goProSpider(scrapy.Spider):
 
     def parse(self, response):
         items = ScrapyChallengeItem()
+        review_id = response.xpath(
+            '//div[contains(@data-hook, "review")]/@id'
+        ).extract()
