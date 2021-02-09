@@ -32,9 +32,9 @@ class goProSpider(scrapy.Spider):
                 '//span[contains(@data-hook, "review-body")]/span/text()'
             ).extract()
 
-        items["review_id"] = "".join(review_id).strip()
-        items["review_title"] = "".join(review_title).strip()
-        items["review_date"] = "".join(review_date).strip()
-        items["review_rating"] = "".join(review_rating).strip()
-        items["review_text"] = "".join(review_text).strip()
+        items["review_id"] = review_id
+        items["review_title"] = review_title
+        items["review_date"] = review_date
+        items["review_rating"] = review_rating
+        items["review_text"] = review_text
         yield items
