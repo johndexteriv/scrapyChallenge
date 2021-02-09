@@ -6,7 +6,7 @@
 import scrapy
 
 
-class ScrapyChallengeItem(scrapy.Item):
+class ProductReviewItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     review_id = scrapy.Field()
@@ -16,7 +16,7 @@ class ScrapyChallengeItem(scrapy.Item):
     review_text = scrapy.Field()
 
 
-class ProductReviewItem(scrapy.Item):
+class ProductInfoItem(scrapy.Item):
 
     product_name = scrapy.Field()
     product_brand = scrapy.Field()

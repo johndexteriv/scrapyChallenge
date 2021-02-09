@@ -1,5 +1,5 @@
 import scrapy
-from scrapy_challenge.items import ScrapyChallengeItem
+from scrapy_challenge.items import ProductReviewItem
 
 
 class reviewSpider(scrapy.Spider):
@@ -11,7 +11,7 @@ class reviewSpider(scrapy.Spider):
     ]
 
     def parse(self, response):
-        items = ScrapyChallengeItem()
+        items = ProductReviewItem()
         all_review_divs = response.xpath('//div[contains(@data-hook, "review"]')
 
         for reviews in all_review_divs

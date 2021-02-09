@@ -1,2 +1,2 @@
 import scrapy
-from scrapy_challenge.items import ProductReviewItem
+from scrapy_challenge.items import ProductInfoItem
