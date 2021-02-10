@@ -6,7 +6,7 @@
 - Use Scrapy framework to develop a spider that scrapes information from page elements. Information to be included: Unique Review ID, Review Title, Review Date, Review Star Rating and Review Text.
 - Setup local instance of MongoDB to store review data.
 - Insert reviews one by one into MongoDB instance.
-- Now extend the exercise ot retrieve product level information from GoPro Page. Information to be included: Product Name, Brand, Source, List Price, Sale Price, Description Paragraph, Overall Star Rating and Total Number of Reviews.
+- Now extend the exercise to retrieve product level information from GoPro Page. Information to be included: Product Name, Brand, Source, List Price, Sale Price, Description Paragraph, Overall Star Rating and Total Number of Reviews.
 - Insert data collected for the product into a different MonogDB associated with products.
 - Modify review collection to associate with the product, allowing you to query tht review collection with product_id key.
 
